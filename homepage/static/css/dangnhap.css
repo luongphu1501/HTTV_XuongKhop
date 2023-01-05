@@ -1,0 +1,74 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border: 5px solid gray;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    top: 100px
+}
+#LoginForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#btnLogin{
+    align-items: center;
+  background-clip: padding-box;
+  background-color: #04aa6d;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+    left: 30%;
+}
+.containerInput{
+    margin: 20px 0;
+}
+#err{
+    text-align: center;
+    margin-top: 40px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.5;
+
+}
+
+span{
+    color: red;
+    display: inline-block;
+    max-width: 170px;
+    margin-top: 15px;
+}
+input{
+    padding: 8px 20px;
+}
+.title{
+    text-align: center;
+    font-size: 28px;
+}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block static_extension %}
+    <title>Hệ thống tư vấn chuẩn đoán bệnh xương khớp</title>
+    <link rel="stylesheet" href="../static/css/trangchu.css">
+{% endblock static_extension %}
+<body>
+    {% block content %}
+    {% if list_tc %}
+        <form action="{% url "homepage:ketqua" %}" method="post">
+        {% csrf_token %}
+            <div class="the-form">
+                {% for tc in list_tc %}
+                <div class="vote">
+                    <p class="the_label">{{ tc.ten }}</p>
+                    <div class="choice">
+                        <input type="radio" name="{{ tc.ki_hieu }}" value="0" checked id="khong{{ tc.ki_hieu }}"> <label for="khong{{ tc.ki_hieu }}">Không</label>
+                        <input type="radio" name="{{ tc.ki_hieu }}" value="0.5" id="nhe{{ tc.ki_hieu }}"> <label for="nhe{{ tc.ki_hieu }}">Nhẹ</label>
+                        <input type="radio" name="{{ tc.ki_hieu }}" value="1" id="vua{{ tc.ki_hieu }}"> <label for="vua{{ tc.ki_hieu }}">Vừa</label>
+                        <input type="radio" name="{{ tc.ki_hieu }}" value="1.5" id="nang{{ tc.ki_hieu }}"> <label for="nang{{ tc.ki_hieu }}">Nặng</label>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        <div id="btn"><input type="submit" value="Submit"  class="button-5"></div>
+        </form>
+    {% else %}
+        <h3>Chưa có dữ liệu</h3>
+    {% endif %}
+    {% endblock content %}
+</body>

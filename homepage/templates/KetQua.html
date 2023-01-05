@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block static_extension %}
+    <title>Kết quả tư vấn</title>
+    <link rel="stylesheet" href="../static/css/ketqua.css">
+{% endblock static_extension %}
+<body>
+    {% block content %}
+        <h3>Kết quả</h3>
+       <div class="table">
+        <table id="result">
+          <tr>
+            <th>Tên bệnh</th>
+            <th>Nguyên nhân</th>
+            <th>Lời khuyên</th>
+          </tr>
+          <tr>
+            <td>{{ result.ten_benh }}</td>
+            <td>{{ result.nguyen_nhan}}</td>
+            <td>{{ result.dieu_tri }}</td>
+          </tr>
+       </table>
+       </div>
+        <footer>
+            <a href="{% url "homepage:trangchu" %}">Quay lại</a>
+            <a href="{% url "homepage:benhan" %}">Xem lịch sử khám</a>
+        </footer>
+    {% endblock content %}
+</body>

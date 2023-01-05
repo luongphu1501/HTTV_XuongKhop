@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Form Login</title>
+    <link href="../static/css/dangnhap.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container">
+        <div id="LoginForm">
+            <form action="{% url "homepage:trangchu" %}" method="post">
+                {% csrf_token %}
+                <h2 class="title">Đăng Nhập</h2>
+
+                <div id="username" class="containerInput">
+                    <input type="email" id="inputusername" placeholder="Email" name="email">
+                    <br>
+                    <span id="msgName"></span>
+                </div>
+                <div id="password" class="containerInput">
+                    <input type="password" id="inputpassword" placeholder="Password" name="matkhau">
+                    <br>
+                    <span id="msgPass">{{ err }}</span>
+                </div>
+
+                <div id="btn">
+                    <button id="btnLogin" type="submit">Login</button>
+                </div>
+                <div id="footer"><a href="{% url "homepage:dangki" %}">Đăng kí</a></div>
+            </form>
+        </div>
+        
+    </div>
+
+</body>
+</html>

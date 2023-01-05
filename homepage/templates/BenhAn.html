@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block static_extension %}
+    <title>Lịch sử khám</title>
+    <link rel="stylesheet" href="../static/css/lichsu.css">
+{% endblock static_extension %}
+<body>
+    {% block content %}
+        <h3>Lịch sử</h3>
+       <div class="table">
+        <table id="result">
+          <tr>
+            <th>Ngày khám</th>
+            <th>Bệnh </th>
+
+          </tr>
+          {% for i in list_benhan %}
+              <tr>
+            <td>{{ i.tenbenh }}</td>
+            <td>{{ i.ngaychuandoan}}</td>
+            </tr>
+          {% endfor %}
+       </table>
+       </div>
+        <footer>
+
+            <a href="{% url "homepage:trangchu" %}">Trang chủ</a>
+        </footer>
+    {% endblock content %}
+</body>

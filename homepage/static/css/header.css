@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    font-family: Arial ;
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-content: space-between;
+    background-color: #8a8a8a;
+    color: white;
+    margin: 0;
+}
+.image{
+    width: 100px;
+    height: 100px;
+
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    margin: auto;
+}
+

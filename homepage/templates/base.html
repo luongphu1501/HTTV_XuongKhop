@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+    <link rel="stylesheet" href="../static/css/header.css">
+
+    {% block static_extension %}
+        <title>Hệ thống tư vấn chuẩn đoán bệnh xương khớp</title>
+
+    {% endblock static_extension %}
+</head>
+<body>
+    {% block header %}
+        <header>
+            <p class="image"><a href="{% url "homepage:trangchu" %}"><img src="../static/logo/Logo_PTIT_University.png"></a></p>
+            <p class="title">Hệ thống tư vấn chuẩn đoán bệnh về xương khớp</p>
+            <span class="session" style="margin-right: 10px">Hi, {{ user }}</span>
+        </header>
+    {% endblock header %}
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+</body>
+</html>
